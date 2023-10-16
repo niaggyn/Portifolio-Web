@@ -1,0 +1,64 @@
+@use '../variables'
+@use '../mixins'
+
+#menu-desktop
+    @include mixins.center
+    width: 200px
+    height: 100%
+    background: #000
+    border: variables.$border-button
+    position: fixed
+    left: -170px
+    transition: 0.5s
+    #menu-desk
+        position: relative
+        top: 0
+    #seta-menu
+        z-index: 100
+        position: relative
+        left: 19px
+
+    
+#menu_container
+    width: 380px
+    height: 480px
+    position: relative
+    background: rgba(0,0 ,0 ,.9 )
+    z-index: 10
+    border: variables.$border-button
+    border-radius: 0 5px 5px 5px
+    @include mixins.center
+    left: 25px
+    top: -1px
+
+ul
+    list-style-type: none
+    li
+        margin-bottom: 10px
+        &:hover
+            background: variables.$bg-color_home_desktop
+    div
+        position: absolute
+        bottom: -400px
+        transform: translate(15%)
+
+#links
+    a
+        text-decoration: none
+        color: variables.$text-color
+        text-transform: uppercase
+        font-size: 1em
+        letter-spacing: .1em
+        text-shadow: 0 3 6px 8px #0000
+        font-weight: bold
+        @media(min-width:520px)
+            padding-left: 40px
+            
+    &:hover
+        color: variables.$text-color-secondary
+    #desatived
+        color: #333232
+
+.show-menu-desktop
+    transform: translate(-170px)
+    transition: 1s

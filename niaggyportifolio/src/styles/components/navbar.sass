@@ -1,0 +1,22 @@
+@use '../variables'
+@use '../mixins'
+
+#menu-container
+    position: absolute
+    @media(min-width: 520px)
+        display: none
+#menu-icon
+    position: relative
+    left: 25px
+    top: 35px
+    z-index: 1
+
+    svg
+        width: 34px
+        height: 30px
+        padding: 3px
+        @include mixins.center
+        color: #FFF
+        background-color: variables.$menu-icon-bg
+        border: variables.$border-menu-icon
+

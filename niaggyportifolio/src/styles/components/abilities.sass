@@ -1,0 +1,86 @@
+@use '../variables'
+@use '../mixins'
+
+
+#abilities_container
+    height: variables.$screenHeight
+    width: variables.$mobile-width
+    background: variables.$bg-color_abilities
+    overflow: hidden
+    @media(min-width:520px)
+        background: variables.$desktop-background
+
+
+#abilities_content
+    @media(min-width:520px)
+        width: 1000px
+        margin: 0 auto
+        margin-top: 60px
+#ability_container, #programmer
+    @media(min-width:520px)
+        h1,h2,h3,a,p
+            color: variables.$text-desktop-main
+        @include mixins.center
+        flex-direction: row
+        margin-left: 230px
+        margin-top: 30px
+        gap: 20px
+
+#card-desktop-orders
+    @media(min-width:520px)
+        width: 350px
+
+#programmer
+    @media(min-width:520px)
+        width: 350px
+        height: auto
+        @include mixins.center
+        flex-direction: column
+        justify-content: initial
+        margin-left: -10px
+        
+#ability_title
+    @media(min-width:520px)
+        height: auto
+        margin-left: 10px
+        margin-top: -25px
+        h1
+            color: variables.$text-desktop-main
+            position: relative
+            left: 60px
+            text-shadow: 0 0 0  #000    
+
+.devs_style
+    @include mixins.center
+    justify-content: start
+    margin: 0 0 0 25px
+    margin-top: 10px
+    @media(min-width:520px)
+        margin-left: 0px
+    
+    svg
+        color:#06FF26
+        font-size: 0.8em
+    h3
+        color: variables.$text-color
+        font-size: 1.1em
+        font-weight: normal
+        margin-left: 5px
+#dev-prog
+    @media(min-width:520px)
+        margin-left: -40px
+        margin-bottom: -15px
+    
+
+#nextPagAbility
+        svg
+            margin-top: 15px
+            color: variables.$text-color-secondary
+            animation: downUp 2s ease-in-out infinite
+            @keyframes downUp
+                100%
+                    transform: translateY(0)
+                50%
+                    transform: translateY(-15px)
+        @media(min-width:520px)
+            display: none

@@ -1,0 +1,38 @@
+@use '../variables'
+@use '../mixins'
+
+.cardsecondary_block
+    @include mixins.center
+    gap: 10px
+    margin-top: 5px
+
+    .cardsecondary
+        @include mixins.center
+        flex-direction: column
+        width: 78px
+        height: 114px
+        color: variables.$text-color
+        background: variables.$bg-color-cards
+        text-decoration: none
+        border: variables.$border-button
+        border-radius: variables.$card-border-radius
+
+        svg
+            color: variables.$text-color
+            font-size: 3.3em
+
+        h3
+            text-align: center
+            margin-top: 15px
+            font-size: 0.8em
+
+#cards2_content
+    @media(min-width:520px)
+        a   
+            background: transparent
+            border: variables.$border-cards2-desktop
+        h3       
+            color: variables.$text-desktop-main
+
+#nextPagAbility
+    margin-top: -90px
