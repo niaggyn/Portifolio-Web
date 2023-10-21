@@ -45,19 +45,19 @@ function Contact() {
           </div>
           <div id="social-medias-contact">
             <div id="link_content">
-              <a href="#" id="link_contact">
+              <a href="https://www.instagram.com/niaggynovoa/" id="link_contact">
                 <BsInstagram />
                 <p>@niaggysilva</p>
               </a>
             </div>
             <div id="link_content">
-              <a href="#" id="link_contact">
+              <a href="https://www.linkedin.com/in/niaggy-novoa-296497b4/" id="link_contact">
                 <BsLinkedin />
                 <p>niaggysilva</p>
               </a>
             </div>
             <div id="link_content">
-              <a href="#" id="link_contact">
+              <a href="https://github.com/niaggyn" id="link_contact">
                 <BsGithub />
                 <p>niaggysilva</p>
               </a>

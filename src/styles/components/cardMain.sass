@@ -6,6 +6,8 @@
     gap: 10px
     margin-top: 5px
     margin-bottom: 10px
+    @media(min-width:520px)
+        gap: 5px
 
     .card
         @include mixins.center
@@ -21,7 +23,9 @@
         position: relative
         background-size: contain
         overflow: hidden
-    
+        @media(min-width:520px)
+            
+
     #bkg-rotate
         position: absolute
         z-index: 1
@@ -30,8 +34,8 @@
         height: 1000%
         animation: rotate 2s infinite linear
         background-image: variables.$border-gradient
-        @keyframes rotate 
-            100% 
+        @keyframes rotate
+            100%
                 transform: rotate(-360deg)
         @media(min-width:520px)
             background-image: variables.$border-gradient-desk
@@ -41,7 +45,7 @@
         z-index: 2
         @include mixins.center
         flex-direction: column
-        
+
         svg
             color: variables.$bg-icon-card-secondary
             font-size: 4.3em
@@ -49,6 +53,3 @@
             text-align: center
             margin-top: 15px
             font-size: 0.8em
-
-    
-            

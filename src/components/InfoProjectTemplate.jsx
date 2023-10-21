@@ -4,7 +4,7 @@ import Gem from "../img/gem";
 import Barra from "../img/barra";
 import "../styles/components/infoProjectTemplate.sass";
 
-import { cards } from "./TemplateTeste/SliderCard";
+import { cards } from "./ProjectPageFiles/SliderCard";
 
 const InfoProjectTemplate = () => {
   let i;

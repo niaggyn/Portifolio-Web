@@ -9,6 +9,9 @@
     height: variables.$screenHeight
     @media(min-width:520px)
         background: variables.$desktop-background
+        background-image: variables.$img-home
+        background-size: cover
+        background-position: center
         width: 100%
         margin: 0 auto
         z-index: 0
@@ -20,6 +23,17 @@
             width: variables.$contentForDesktop
             height: 100vh
             margin: 0 auto
+
+#apresentation
+    @media(min-width:520px)
+        width: variables.$contentForDesktop
+        margin: 0 auto
+        @include mixins.center
+        flex-direction: row
+        margin-top: 30px
+        #profile_apresentation
+            width: 700px
+            position: relative
 
 #logo
     @include mixins.center
@@ -56,17 +70,16 @@
             color: variables.$text-desktop-main
             text-align: justify
             width: 650px
-            position: relative
-            right: 90px
+            margin-right: auto
+            
                         
     #foto
         width: 180px
         height: 180px
-        background: darkblue
-        position: relative
-        right: 250px
+        background: url('../../img/perfil.jpg')
+        background-size: contain
+        margin-right: auto
         margin-top: 5%
-        margin-left: -150px
         border-radius: variables.$gallery-bd-radius
         @media(max-width:520px)
             display: none
@@ -127,9 +140,9 @@
     @include mixins.center
     margin-top: 20px
     @media(min-width:520px)
-        position: relative
-        right: 280px
-        top: 50px
+        margin-right: auto
+        position: absolute
+        left: 0px
     button
         width: 275px
         height: 52px
@@ -137,7 +150,7 @@
         border-radius: variables.$card-border-radius
 
         &:hover
-            background: variables.$bg-color_home_desktop
+            background: #145800f7
             @media(max-width:520px)
                 background: #000
                 
@@ -164,9 +177,7 @@
 #social-medias
     @include mixins.center
     flex-direction: column
-    position: relative
-    left: 470px
-    top: -280px
+    margin-top: -120px
     @media(max-width:520px)
         display: none
     #link_content
@@ -176,8 +187,8 @@
         margin-bottom: 25px
 
         #link_contact
-            width: 266px
-            height: 46px
+            width: 250px
+            height: 36px
             background: variables.$bg-color-cards
             border: variables.$border-desktop
             border-radius: variables.$container-border-radius

@@ -13,7 +13,7 @@
 
 #abilities_content
     @media(min-width:520px)
-        width: 1000px
+        width: variables.$contentForDesktop
         margin: 0 auto
         margin-top: 60px
 #ability_container, #programmer
@@ -22,9 +22,10 @@
             color: variables.$text-desktop-main
         @include mixins.center
         flex-direction: row
-        margin-left: 230px
+        margin-right: auto
         margin-top: 30px
         gap: 20px
+        width: variables.$contentForDesktop
 
 #card-desktop-orders
     @media(min-width:520px)
@@ -32,22 +33,31 @@
 
 #programmer
     @media(min-width:520px)
-        width: 350px
-        height: auto
-        @include mixins.center
-        flex-direction: column
-        justify-content: initial
-        margin-left: -10px
+        #programmer_tips
+            width: 350px
+            height: auto
+            @include mixins.center
+            flex-direction: column
+            margin-right: auto
+            
+            #cards2_content
+                margin-right: auto
+                a   
+                    background: transparent
+                    border: variables.$border-cards2-desktop
+                h3       
+                    color: variables.$text-desktop-main
+
         
 #ability_title
     @media(min-width:520px)
         height: auto
-        margin-left: 10px
+        margin-left: -20px
         margin-top: -25px
         h1
             color: variables.$text-desktop-main
             position: relative
-            left: 60px
+            left: 20px
             text-shadow: 0 0 0  #000    
 
 .devs_style
@@ -68,9 +78,8 @@
         margin-left: 5px
 #dev-prog
     @media(min-width:520px)
-        margin-left: -40px
-        margin-bottom: -15px
-    
+        margin-right: auto
+        
 
 #nextPagAbility
         svg

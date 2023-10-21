@@ -3,22 +3,24 @@
 
 #menu-desktop
     @include mixins.center
-    width: 200px
+    width: 210px
     height: 100%
     background: #000
     border: variables.$border-button
     position: fixed
-    left: -170px
+    left: 0px
     transition: 0.5s
     #menu-desk
+        width: 100%
         position: relative
         top: 0
+        left: -20px
     #seta-menu
+        display: none
         z-index: 100
         position: relative
         left: 19px
 
-    
 #menu_container
     width: 380px
     height: 480px
@@ -40,25 +42,33 @@ ul
     div
         position: absolute
         bottom: -400px
-        transform: translate(15%)
+        transform: translate(10%)
 
 #links
     a
         text-decoration: none
         color: variables.$text-color
         text-transform: uppercase
-        font-size: 1em
+        font-size: 0.95em
         letter-spacing: .1em
         text-shadow: 0 3 6px 8px #0000
         font-weight: bold
         @media(min-width:520px)
             padding-left: 40px
-            
+    svg
+        margin-right: 7px
+        color: variables.$text-color-secondary
+        padding-top: 2px     
     &:hover
         color: variables.$text-color-secondary
+        svg
+            color: #ffff
+            transition: 0.1s
     #desatived
         color: #333232
 
 .show-menu-desktop
     transform: translate(-170px)
     transition: 1s
+
+

@@ -10,7 +10,7 @@ const programmer = [
 
 const FourthCard = () => {
   return (
-    <div className="cardsecondary_block" id="cards2_content">
+    <div className="cardsecondary_block">
       {programmer.map((design) => (
         <a
           href="#"

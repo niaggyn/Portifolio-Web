@@ -9,83 +9,61 @@
     @media(min-width:520px)
         background: variables.$desktop-background
 
-#forDesktopPreview
-    @media(min-width:520px)
-        @include mixins.center
-        justify-content: center
-        width: 100%
-        height: 600px        
-        #project_file
-            width: 45%
-            z-index: 5
-        #project_infotext
-            width: 400px
-            height: 300px
-            position: relative
-            left: 200px
-            top: 40px
-            background-image: linear-gradient(90deg,#e4f5e5,#d7f0d9)
-            z-index: 15
-            p   
-                margin-top: 0
-                height: auto
-                width: auto
-                right: 24%
-                top: 270px
-                color: variables.$text-desktop-main
-                text-align: justify
-                font-style: normal
-                font-size: 0.9em
-                font-weight: normal
-            
-#project_file
-    @include mixins.center
-    margin: 0 auto
-    margin-top: 20px
-    width: 100%
-    height: 490px
-    background: transparent
-    @media(min-width:520px)
-        position: absolute
-        left: 40px
-        top: 50px
-        width: auto
-
 #project-content
     width: variables.$mobile-width
     height: variables.$screenHeight
     @media(min-width:520px)
-        width: 100%
+        width: 100vw
         height: 580px
-        margin: 0 auto
-        margin-top: 30px
         position: relative
-        left: 230px
+        left: 250px
+        margin-top: 30px
         border: variables.$border-project-desktop
         border-radius: variables.$border-radius-project-desktop
+    #project-title
+        @media(min-width:520px)
+            width: 100vw
+            height: auto
+            margin-left: 10px
+            margin-top: -25px
+            background: variables.$bg-project-title
+            h1
+                position: relative
+                left: 40px
+                text-shadow: 0 0 0  #000
 
-#project-title
+#forMobilePreview
     @media(min-width:520px)
-        height: auto
-        margin-left: 10px
-        margin-top: -25px
-        background: variables.$bg-project-title
-        h1
-            position: relative
-            left: 20px
-            text-shadow: 0 0 0  #000
-#project_infotext
-    p
-        text-align: center
+            display: none
+    #project_file
+        @include mixins.center
         margin: 0 auto
         margin-top: 20px
-        width: 80%
-        height: 85px
-        color: variables.$text-color
-        font-style: italic
-        font-weight: lighter
-        font-size: 0.9em
-        
+        width: 100%
+        height: 490px
+        background: transparent
+        @media(min-width:520px)
+            display: none
+    #project_infotext
+        p
+            text-align: center
+            margin: 0 auto
+            margin-top: 20px
+            width: 80%
+            height: 85px
+            color: variables.$text-color
+            font-style: italic
+            font-weight: lighter
+            font-size: 0.9em
+
+#forDesktopPreview
+    @media(max-width:520px)
+        display: none
+    @media(min-width:520px)
+        width: 100%
+        height: 500px
+        margin: 0 auto
+
 #next
     margin-top: -60px
     svg

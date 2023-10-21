@@ -9,11 +9,13 @@
     overflow: hidden
     @media(min-width:520px)
         height: 350px
+        width: 100%
+        overflow: hidden
 
 #contact_title
     @media(min-width:520px)
         h1
-            margin-left: 70px
+            margin-left: 90px
 
 #backHome
     width: 20px
@@ -36,8 +38,12 @@
 
 #contact_desk
     @media(min-width:520px)
+        width: variables.$contentForDesktop
+        margin: 0 auto
         @include mixins.center
         flex-direction: row
+        margin-right: auto
+        position: relative
 
 #contact_content
     width: 320px
@@ -47,7 +53,6 @@
     background: variables.$bg-color-contact-container
     @media(min-width:520px)
         width: 529px
-        margin-left: 220px
         height: 182px
         margin-top: 30px
     #info_contact
@@ -119,7 +124,10 @@
     @media(min-width:520px)
         display: none
 #logo_footer
-    width: 40%
-    margin-right: -30px
-    @media(max-width:520px)
-        display: none
+    width: 500px
+    img
+        position: absolute
+        right: 0
+        width: 300px
+        @media(max-width:520px)
+            display: none

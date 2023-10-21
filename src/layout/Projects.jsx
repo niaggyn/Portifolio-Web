@@ -5,11 +5,13 @@ import Nextpag from "../components/Nextpag";
 import TitlePag from "../components/TitlePag";
 import Barra from "../img/barra";
 
-import "../styles/components/Projects.sass";
 import ProjectsCard from "../components/ProjectsCard";
-import SliderCard from "../components/TemplateTeste/SliderCard";
+import SliderCard from "../components/ProjectPageFiles/SliderCard";
 
-import { cards } from "../components/TemplateTeste/SliderCard";
+import "../styles/components/Projects.sass";
+
+import { cards } from "../components/ProjectPageFiles/SliderCard";
+import SliderCardDesktop from "../components/ProjectPageFiles/desktop/SliderCardDesktop";
 
 const Projects = ({ ref, img, name, id }) => {
   return (
@@ -22,7 +24,8 @@ const Projects = ({ ref, img, name, id }) => {
           <div id="project-title">
             <TitlePag title="Projetos" />
           </div>
-          <div id="forDesktopPreview">
+          <div id="forMobilePreview">
+            {/**Necessita ajustes */}
             <div id="project_file">
               <SliderCard />
             </div>
@@ -33,6 +36,9 @@ const Projects = ({ ref, img, name, id }) => {
                 totam doloribus aperiam, voluptatibus, ex atque.
               </p>
             </div>
+          </div>
+          <div id="forDesktopPreview">
+            <SliderCardDesktop/>
           </div>
           <div id="next">
             <Link

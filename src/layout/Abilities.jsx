@@ -51,15 +51,19 @@ const Abilities = () => {
           </div>
         </div>
         <div id="programmer">
-          <div className="devs_style" id="dev-prog">
-            <HiChevronDoubleRight />
-            <h3>Programação</h3>
-          </div>
-          <div>
-            <FourthCard />
+          <div id="programmer_tips">
+            <div className="devs_style" id="dev-prog">
+              <HiChevronDoubleRight />
+              <h3>Programação</h3>
+            </div>
+            <div id="cards2_content">
+              <FourthCard />
+            </div>
           </div>
         </div>
-        <div id="nextPagAbility">
+        
+      </div>
+      <div id="nextPagAbility">
           <Link
             to="gallery_container"
             spy={true}
@@ -70,7 +74,6 @@ const Abilities = () => {
             <Nextpag />
           </Link>
         </div>
-      </div>
     </section>
   );
 };

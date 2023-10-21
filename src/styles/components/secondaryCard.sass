@@ -8,6 +8,7 @@
     margin-bottom: 10px
     
     
+    
     .cardsecondary
         @include mixins.center
         flex-direction: column
@@ -30,18 +31,17 @@
             font-size: 0.8em
 
 #cards_content, #cards2_content
-    a
-        @media(min-width:520px)
-            width: 78px
+    @media(min-width:520px)
+        gap: 5px
+        a
+            width: 75px
             height: 134px
             background: variables.$bg-color-contact-container
-    h3
-        @media(min-width:520px)
+        h3
             color: variables.$text-color
             position: relative
             top: 10px
-    svg
-        @media(min-width:520px)
+        svg      
             height: 55px
 
 

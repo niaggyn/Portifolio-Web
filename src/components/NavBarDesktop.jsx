@@ -4,19 +4,24 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import Barra from "../img/barra";
 
+import { ImHome3 } from "react-icons/im";
+import { GiGraduateCap } from "react-icons/gi";
+import { LuGalleryHorizontal, LuGalleryThumbnails } from "react-icons/lu";
+import { BiSolidContact } from "react-icons/bi";
+
 import seta from "../img/menuSeta.svg";
 import "../styles/components/menuDesktop.sass";
 
 const NavBarDesktop = () => {
-  useEffect(() => {
+  /* useEffect(() => {
     const showMenu = document.getElementById("seta-menu");
     const menuDesktop = document.getElementById("menu-desktop");
     showMenu.addEventListener("click", () => {
       if ((menuDesktop.style.left = "-170px")) menuDesktop.style.left = "0px";
-      else if(menuDesktop.style.left = "0px")
-        menuDesktop.classList.add('show-menu-desktop')
+      else if ((menuDesktop.style.left = "0px"))
+        menuDesktop.classList.add("show-menu-desktop");
     });
-  });
+  }); */
   return (
     <>
       <aside id="menu-desktop">
@@ -28,10 +33,13 @@ const NavBarDesktop = () => {
                 to="home_container"
                 spy={true}
                 smooth={true}
-                offset={-120}
+                offset={-190}
                 duration={500}
               >
-                <a href="#">HOME</a>
+                <a href="#">
+                  <ImHome3 />
+                  HOME
+                </a>
               </Link>
             </li>
             <li>
@@ -43,7 +51,10 @@ const NavBarDesktop = () => {
                 offset={-120}
                 duration={500}
               >
-                <a href="#">Projetos</a>
+                <a href="#">
+                  <LuGalleryThumbnails />
+                  Projetos
+                </a>
               </Link>
             </li>
             <li>
@@ -55,7 +66,10 @@ const NavBarDesktop = () => {
                 offset={-120}
                 duration={500}
               >
-                <a href="#">Habilidades</a>
+                <a href="#">
+                  <GiGraduateCap />
+                  Habilidades
+                </a>
               </Link>
             </li>
             <li>
@@ -67,7 +81,10 @@ const NavBarDesktop = () => {
                 offset={-120}
                 duration={500}
               >
-                <a href="#">Galeria</a>
+                <a href="#">
+                  <LuGalleryHorizontal />
+                  Galeria
+                </a>
               </Link>
             </li>
             <li>
@@ -79,7 +96,10 @@ const NavBarDesktop = () => {
                 offset={-120}
                 duration={500}
               >
-                <a href="#">Contato</a>
+                <a href="#">
+                  <BiSolidContact />
+                  Contato
+                </a>
               </Link>
             </li>
             <li>
