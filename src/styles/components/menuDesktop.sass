@@ -5,11 +5,17 @@
     @include mixins.center
     width: 210px
     height: 100%
-    background: #000
+    background: variables.$img-menuBkg
     border: variables.$border-button
+    border-color: transparent
     position: fixed
     left: 0px
     transition: 0.5s
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        background-size: cover
+        background-repeat: no-repeat
+    @media(max-aspect-ratio: 4/3)
+        background-size: cover
     #menu-desk
         width: 100%
         position: relative
@@ -21,21 +27,10 @@
         position: relative
         left: 19px
 
-#menu_container
-    width: 380px
-    height: 480px
-    position: relative
-    background: rgba(0,0 ,0 ,.9 )
-    z-index: 10
-    border: variables.$border-button
-    border-radius: 0 5px 5px 5px
-    @include mixins.center
-    left: 25px
-    top: -1px
-
 ul
     list-style-type: none
     li
+        height: 15px
         margin-bottom: 10px
         &:hover
             background: variables.$bg-color_home_desktop
@@ -55,20 +50,22 @@ ul
         font-weight: bold
         @media(min-width:520px)
             padding-left: 40px
+        #desatived
+            color: #262626
     svg
         margin-right: 7px
         color: variables.$text-color-secondary
-        padding-top: 2px     
+        padding-top: 2px
     &:hover
         color: variables.$text-color-secondary
         svg
             color: #ffff
             transition: 0.1s
-    #desatived
-        color: #333232
 
 .show-menu-desktop
     transform: translate(-170px)
     transition: 1s
 
-
+#desatived-link
+    color: black
+    opacity: .1

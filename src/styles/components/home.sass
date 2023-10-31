@@ -7,47 +7,85 @@
     background-attachment: fixed
     background-position: center
     height: variables.$screenHeight
+    overflow: hidden
     @media(min-width:520px)
-        background: variables.$desktop-background
-        background-image: variables.$img-home
-        background-size: cover
+        background: variables.$img-home
         background-position: center
+        background-position-x: 850px
+        background-position-y: 180px
+        background-size: 500px
+        background-repeat: no-repeat
         width: 100%
         margin: 0 auto
         z-index: 0
+    @media(max-width: variables.$break-point-mobile-03w)
+        background: variables.$img-home-mobile
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        width: variables.$break-point-desktop-03w
+        background-position-x: 950px
+        background-position-y: 450px
+    @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
+        background-position-x: 750px
+        background-position-y: 320px
+        height: 70vh
 
     #home_content
         width: variables.$mobile-width
         height: variables.$screenHeight
-        @media(min-width:520px)
+        @media (min-width:variables.$break-point-mobile-04h)
             width: variables.$contentForDesktop
             height: 100vh
             margin: 0 auto
+            background: variables.$img-projects
+            background-repeat: no-repeat
+            background-position-y: calc( 100vh - 170px )
+            background-position-x: 577px
+        @media(min-width: variables.$break-point-desktop-01w - 1px)
+            width: variables.$break-point-desktop-03w
+        @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
+            width: variables.$break-point-desktop-02h
+            
+            
+
 
 #apresentation
+    @media(max-width:520px)
+        width: 100vw
     @media(min-width:520px)
         width: variables.$contentForDesktop
+        height: calc( 100vh - 120px )
         margin: 0 auto
         @include mixins.center
-        flex-direction: row
         margin-top: 30px
+        position: relative
+        flex-direction: column
         #profile_apresentation
-            width: 700px
-            position: relative
-
+            width: inherit
+            padding-left: 35px
+            height: calc( 100vh - 120px )
+            @media only screen and (min-width: variables.$break-point-desktop-02w ) and (max-width: variables.$break-point-desktop-02w + 1) and (min-height: variables.$break-point-desktop-02h)
+                padding-left: 40px
+    @media(min-width: variables.$break-point-desktop-04w)
+        width: variables.$break-point-desktop-04w
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        width: variables.$break-point-desktop-03w
+    
+        
 #logo
     @include mixins.center
     img
         width: 200px
         height: 50px
-        margin-top: 25%
+        margin-top: 20%
+        @media(max-width: variables.$break-point-mobile-05h)
+            margin-top: 30%
     @media(min-width:520px)
         display: none
-
+    
 #msg_home
     @include mixins.center
     flex-direction: column
-    padding-top: 40px
+    padding-top: 20px
     @media(min-width:520px)
         padding-top: 0
 
@@ -59,20 +97,37 @@
             display: none
     p
         margin-top: 35px
-        text-align: center
-        width: 70%
+        text-align: justify
+        width: 80%
         color: variables.$text-color
         height: auto
-        font-size: 1em
+        font-size: 0.8em
         margin-bottom: 10px
         @media(min-width:520px)
+            text-indent: 3em
             font-size: 1em
             color: variables.$text-desktop-main
             text-align: justify
-            width: 650px
+            width: 550px
             margin-right: auto
-            
-                        
+            margin-bottom: 10px
+            &:first-of-type
+                margin-bottom: 10px
+        @media(max-width: variables.$break-point-mobile-01h)
+            font-size: .8em
+            text-indent: 30px
+        @media(max-height: variables.$break-point-mobile-05h)
+            font-size: .9em
+            text-indent: 30px
+        @media(min-height: variables.$break-point-mobile-02h)
+            font-size: 1.2em
+        @media(min-width: variables.$break-point-desktop-01w - 1px)
+            padding-top: 30px
+            width: 800px
+            font-size: 1.5em
+        @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
+            font-size: 1em
+            width: 500px
     #foto
         width: 180px
         height: 180px
@@ -86,37 +141,41 @@
 #perfil
     @include mixins.center
     margin: 0 auto
-    width: 280px
+    width: 80vw
     height: 77px
     margin-top: 15px
-    gap: 5px
     @media(min-width:520px)
         display: none
 
     #perfil_left
-        a,img
-            width: 79px
-            height: 77px
-            background: variables.$bg-color-cards
-            border-radius: variables.$card-border-radius
-            cursor: pointer
+        width: 79px
+        max-width: 25%
+        height: 77px
+        background: url('../../img/perfil.jpg')
+        background-size: cover
+        border-radius: variables.$card-border-radius
+        cursor: pointer
+        margin-right: auto
+        
 
     #perfil_right
         @include mixins.center
         flex-direction: column
+        width: 75%
         gap: 5px
         @media(min-width:520px)
             display: none
 
         a
             @include mixins.center
-            width: 183px
+            width: 100%
             height: 35px
             background: variables.$bg-color-cards
             border: variables.$border-button
             border-radius: variables.$card-border-radius
             cursor: pointer
             text-decoration: none
+            margin-left: 10px
 
             svg
                 justify-content: start
@@ -140,54 +199,48 @@
     @include mixins.center
     margin-top: 20px
     @media(min-width:520px)
-        margin-right: auto
-        position: absolute
-        left: 0px
+        width: 275px
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        margin-top: 50px
     button
         width: 275px
         height: 52px
-        background-color: #004A25
+        background: linear-gradient(90deg,rgb(116, 61, 226),rgb(11, 0, 49))
         border-radius: variables.$card-border-radius
-
+        border-color: transparent
+        cursor: pointer
+        @media(max-width: variables.$break-point-mobile-05w)
+            background: #000
+            
         &:hover
-            background: #145800f7
+            background: linear-gradient(90deg,rgb(11, 0, 49),rgb(27, 2, 80))
+            transition: .5s
             @media(max-width:520px)
-                background: #000
-                
-                    
+                background: linear-gradient(90deg,rgb(11, 0, 49),rgb(7, 130, 87))
+
     #teste
         svg
             width: 30px
             height: 30px
 
-#nextPagHome
-    position: relative
-    top: -8%
-    @media(min-width:520px)
-        display: none
-    svg
-        background: variables.$bg-color_contact
-        animation: downUp 2s ease-in-out infinite
-        @keyframes downUp
-            100%
-                transform: translateY(0)
-            50%
-                transform: translateY(-15px)
-
 #social-medias
     @include mixins.center
-    flex-direction: column
-    margin-top: -120px
+    flex-direction: row
+    margin-top: 30px
+    width: 430px
+    gap: 20px
     @media(max-width:520px)
         display: none
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        margin-top: 50px
     #link_content
         @include mixins.center
         flex-direction: column
-        margin: 0 auto
+        margin: 0
         margin-bottom: 25px
 
         #link_contact
-            width: 250px
+            width: 130px
             height: 36px
             background: variables.$bg-color-cards
             border: variables.$border-desktop
@@ -218,5 +271,21 @@
                 border: variables.$border-button
                 p,svg
                     color: variables.$text-color
-                
-            
+
+#nextPagHome
+    position: relative
+    top: -50px
+    @media(min-height: variables.$break-point-mobile-03h)
+        top: 30px
+    @media(min-height: variables.$break-point-mobile-01h)
+        top: 0px
+    @media(min-width:520px)
+        display: none
+    svg
+        background: variables.$bg-color_contact
+        animation: downUp 2s ease-in-out infinite
+        @keyframes downUp
+            100%
+                transform: translateY(0)
+            50%
+                transform: translateY(-15px)

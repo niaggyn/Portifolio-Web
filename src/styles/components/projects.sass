@@ -7,8 +7,17 @@
     background: variables.$bg-color_projects
     overflow: hidden
     @media(min-width:520px)
-        background: variables.$desktop-background
-
+        background: variables.$img-projects
+        background-repeat: no-repeat
+        background-position-x: 826px
+        background-position-y: -180px
+        z-index: 50
+        height: 80vh
+    @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
+        height: 60vh
+        width: variables.$break-point-desktop-04w
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        height: 90vh
 #project-content
     width: variables.$mobile-width
     height: variables.$screenHeight
@@ -20,27 +29,34 @@
         margin-top: 30px
         border: variables.$border-project-desktop
         border-radius: variables.$border-radius-project-desktop
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        height: calc( 100vh - 200px )
     #project-title
         @media(min-width:520px)
             width: 100vw
-            height: auto
-            margin-left: 10px
-            margin-top: -25px
+            height: 40px
+            position: relative
+            top: 10px
+            left: 10px
+            border-radius: 5px
             background: variables.$bg-project-title
             h1
                 position: relative
-                left: 40px
+                left: 20px
+                top: -5px
+                padding-right: 40px
                 text-shadow: 0 0 0  #000
+            
 
 #forMobilePreview
+    padding-top: 5vh
     @media(min-width:520px)
             display: none
     #project_file
         @include mixins.center
         margin: 0 auto
-        margin-top: 20px
         width: 100%
-        height: 490px
+        height: 75vh
         background: transparent
         @media(min-width:520px)
             display: none
@@ -63,7 +79,8 @@
         width: 100%
         height: 500px
         margin: 0 auto
-
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        height: 800px
 #next
     margin-top: -60px
     svg

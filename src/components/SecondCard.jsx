@@ -3,6 +3,7 @@ import Coreldraw from "../img/coreldraw";
 import AdobeXd from "../img/adobeXd";
 import Illustrator from "../img/illustrator";
 
+//style
 import "../styles/components/secondaryCard.sass";
 
 const designPack = [

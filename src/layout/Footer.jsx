@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <section id="footer">
       <div id="footer-content">
-        {/* <Logo /> */}
         <img src={logoMobileFooter} alt="NiaggyWebDeveloper" />
       </div>
     </section>

@@ -1,24 +1,63 @@
 //@include font('Mulish', './fonts/Mulish-Variable')
 //@include font('Mulish_Italic', './fonts/Mulish-Italic')
 
-@font-face
-    font-family: 'Mulish'
-    src: url('./fonts/Mulish-Variable') format(truetype)
+//backup googlefonts
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,700;1,300;1,600&display=swap')
 
-    font-family: 'Mulish-Italic'
-    src: url('./fonts/Mulish-Italic') format(truetype)
+//local-fonts
+@font-face
+    font-family: 'SegoeUI'
+    src: url('./fonts/SegoeUI') format('truetype')
+
+    font-family: 'SegoeUIBoldItalic'
+    src: url('./fonts/SegoeUIBoldItalic') format('truetype')
+
+    font-family: 'SegoeUISB'
+    src: url('./fonts/seguisb') format('truetype')
 
 //mobile test - redmi 9
 $min-width-mobile: 415px
 $height-mobile: 851px
 
+
+//breakpoints
+//Mobile
+$break-point-mobile-01w: 360px   //360x800
+$break-point-mobile-01h: 800px
+$break-point-mobile-02w: 390px   //390x844
+$break-point-mobile-02h: 844px
+$break-point-mobile-03w: 414px   //414x896
+$break-point-mobile-03h: 896px   
+$break-point-mobile-04w: 393px   //393x873
+$break-point-mobile-04h: 873px
+$break-point-mobile-05w: 412px   //412x915
+$break-point-mobile-05h: 915px
+//Desktop
+$break-point-desktop-01w: 1920px
+$break-point-desktop-01h: 1080px
+$break-point-desktop-02w: 1366px
+$break-point-desktop-02h: 768px
+$break-point-desktop-03w: 1440px
+$break-point-desktop-03h: 900px
+$break-point-desktop-04w: 1280px
+$break-point-desktop-04h: 720px
+$break-point-desktop-05w: 1280px
+$break-point-desktop-05h: 1024px
+
 //img
-$img-header: url("../../img/neon.jpg")
-$img-home:url(".././img/back.jpg")
+$img-menuBkg: url("../../img/menuBkg.png")
+$img-header: url("../../img/headerBkg.png")
+$img-home: url("../../img/homeDetail.png")
+$img-home-mobile: url("../../img/homeBkgMobile.png")
+$img-hability: url("../../img/habilityBkg.png")
+$img-projects: url("../../img/projectsBkgTop.png")
+$img-galery: url("../../img/galleryBkg.png")
 
 //fonts
-$font-stack: "Mulish"
-$font-stack-secondary: "Mulish_Italic"
+$font-stack: 'SegoeUI'
+$font-stack-secondary: 'SegoeUIBoldItalic'
+$font-stack-web: 'Mulish'
+$segoe-sb: 'SegoeUISB'
 
 //listar todos os elementos do projeto em forma de variaveis
 $text-color: #FFFFFF
@@ -34,7 +73,6 @@ $bg-color-gallery-card: rgb(0,0,0)
 $bg-color-contact-container: #374261
 $border-gradient: conic-gradient(rgba(74, 115, 161,.5) 20deg, transparent 120deg)
 $border-gradient-desk: conic-gradient(rgba(31, 5, 65, 0.5) 20deg, transparent 120deg)
-
 
 $container-border-radius: 6px
 $card-border-radius: 6px
@@ -59,7 +97,7 @@ $min-mobile: 320px
 $max-mobile: 520px
 
 //desktop
-$bg-color_home_desktop: linear-gradient(270deg,rgb(0,0,0),rgb(9,202,180))
+$bg-color_home_desktop: linear-gradient(270deg,rgb(0,0,0,0.1),rgb(9,202,180))
 $desktop-width: 100%
 $min-desktop: 1366px
 $max-desktop: 521px
@@ -72,8 +110,8 @@ $border-project-desktop: 1px solid #05DEFC
 $border-radius-project-desktop: 10px
 $bg-project-title: linear-gradient(270deg, #0D0276,#09CAB4)
 
-$bg-ability-card-desktop:#27247B
-$border-cards2-desktop:1px solid #27247B
+$bg-ability-card-desktop: #27247B
+$border-cards2-desktop: 1px solid #27247B
 
 //reponsiveheight
 $screenHeight: 100vh

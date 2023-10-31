@@ -1,0 +1,12 @@
+@use '../../../variables'
+@use '../../../mixins'
+.main-desktop
+    @include mixins.center
+    position: relative
+    width: variables.$contentForDesktop
+    left: 50px
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        height: 100%
+        width: variables.$break-point-desktop-02w
+    @media(max-aspect-ratio: 4/3)
+        width: variables.$break-point-desktop-03h

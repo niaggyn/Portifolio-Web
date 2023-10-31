@@ -2,14 +2,31 @@
 @use '../mixins'
 
 #titulo
+    height: 35px
+    padding-top: 35px
+    padding-left: 20px
+    @media(min-width:520px)
+        padding-top: 0
+        padding-left: 10px
+
+    #titleIdColor
+        display: inline-block
+        height: 35px
+        width: 5px
+        background-color: #84EEE2
+        @media(min-width:520px)
+        
     h1
-        position: relative
-        left: calc( 10% + 30px )
+        display: inline-block
+        width: 200px
+        font-family: variables.$font-stack-web
+        font-weight: 700
         text-transform: uppercase
-        font-size: 2.3em
+        font-size: 2em
         color: variables.$text-color
         letter-spacing: .1em
-        margin-top: 35px
-        text-shadow:2px 5px 20px #000
+        text-shadow: 2px 5px 20px #000
+        padding-left: 10px
         @media(min-width:520px)
-            font-size: 1.8em 
+            font-size: 1.8em
+            padding-left: 0px

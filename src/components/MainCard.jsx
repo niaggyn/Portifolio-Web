@@ -2,6 +2,7 @@ import { AiFillHtml5 } from "react-icons/ai";
 import { FaCss3Alt, FaReact } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 
+//style
 import "../styles/components/cardMain.sass";
 
 const webTools = [

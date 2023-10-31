@@ -1,27 +1,16 @@
 import React from "react";
-import Menu from "./Menu";
-import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import Barra from "../img/barra";
 
+//icons
 import { ImHome3 } from "react-icons/im";
 import { GiGraduateCap } from "react-icons/gi";
 import { LuGalleryHorizontal, LuGalleryThumbnails } from "react-icons/lu";
 import { BiSolidContact } from "react-icons/bi";
 
-import seta from "../img/menuSeta.svg";
+//style
 import "../styles/components/menuDesktop.sass";
 
 const NavBarDesktop = () => {
-  /* useEffect(() => {
-    const showMenu = document.getElementById("seta-menu");
-    const menuDesktop = document.getElementById("menu-desktop");
-    showMenu.addEventListener("click", () => {
-      if ((menuDesktop.style.left = "-170px")) menuDesktop.style.left = "0px";
-      else if ((menuDesktop.style.left = "0px"))
-        menuDesktop.classList.add("show-menu-desktop");
-    });
-  }); */
   return (
     <>
       <aside id="menu-desktop">
@@ -33,7 +22,7 @@ const NavBarDesktop = () => {
                 to="home_container"
                 spy={true}
                 smooth={true}
-                offset={-190}
+                offset={-170}
                 duration={500}
               >
                 <a href="#">
@@ -48,7 +37,7 @@ const NavBarDesktop = () => {
                 to="projets_container"
                 spy={true}
                 smooth={true}
-                offset={-120}
+                offset={-110}
                 duration={500}
               >
                 <a href="#">
@@ -63,7 +52,7 @@ const NavBarDesktop = () => {
                 to="abilities_container"
                 spy={true}
                 smooth={true}
-                offset={-120}
+                offset={-110}
                 duration={500}
               >
                 <a href="#">
@@ -78,7 +67,7 @@ const NavBarDesktop = () => {
                 to="gallery_container"
                 spy={true}
                 smooth={true}
-                offset={-120}
+                offset={-110}
                 duration={500}
               >
                 <a href="#">
@@ -93,7 +82,7 @@ const NavBarDesktop = () => {
                 to="contact_container"
                 spy={true}
                 smooth={true}
-                offset={-120}
+                offset={-110}
                 duration={500}
               >
                 <a href="#">
@@ -104,18 +93,12 @@ const NavBarDesktop = () => {
             </li>
             <li>
               <Link id="links">
-                <a id="desatived" to="#">
+                <a id="desatived-link" to="#">
                   Article...
                 </a>
               </Link>
             </li>
-            <div>
-              <Barra />
-            </div>
           </ul>
-        </div>
-        <div id="seta-menu">
-          <img src={seta} alt="Side-Menu" />
         </div>
       </aside>
     </>

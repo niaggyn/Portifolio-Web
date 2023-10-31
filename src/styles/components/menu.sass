@@ -2,32 +2,41 @@
 @use '../mixins'
 
 #menu_container
-    width: 380px
-    height: 480px
+    width: 90vw
+    height: 70vh
     position: relative
-    background: rgba(0,0 ,0 ,.9 )
-    z-index: 10
+    background: variables.$img-menuBkg
+    background-size: 150% 150%
+    background-position-y:0 
+    z-index: 100
     border: variables.$border-button
     border-radius: 0 5px 5px 5px
+    border-color: transparent
     @include mixins.center
-    left: 25px
     top: -1px
 
     ul
+        width: 80%
+        height: 80%
         list-style-type: none
-        margin-top: -20%
+        margin-top: 20px
+
+    li
+        height: auto
+        margin-bottom: 10px
+        &:hover
+            color: variables.$text-color-secondary
 
     #links
         a
             text-decoration: none
             color: variables.$text-color
             text-transform: uppercase
-            font-size: 2.3em
+            font-size: 1.5em
+            font-weight: lighter
             letter-spacing: .1em
             text-shadow: 0 3 6px 8px #0000
-            font-weight: bold
-        &:hover
-            color: variables.$text-color-secondary
+            &:hover
+                color: #fffff
         #desatived
-            color: #333232
-
+            color: #00000013

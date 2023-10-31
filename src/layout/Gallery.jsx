@@ -5,11 +5,6 @@ import { HiChevronDoubleRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { useEffect, useState } from "react";
 
-//galeria
-import citacao2 from "../img/gallery/citacao2.jpg";
-import tec1 from "../img/gallery/tec1.jpg";
-import promotion from "../img/gallery/promotion-web.jpg";
-import tecnologo from "../img/gallery/tecnologo.jpg";
 
 //img
 import img01 from "../img/gallery/apr.jpg";
@@ -65,9 +60,6 @@ function Gallery() {
 
   return (
     <section id="gallery_container">
-      {/* <div id="random-gallery">
-        <img src={GalleryFiles[imagens]} alt="" />
-      </div> */}
       <div>
         <Navbar />
       </div>

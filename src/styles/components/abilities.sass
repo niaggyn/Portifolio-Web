@@ -8,7 +8,15 @@
     background: variables.$bg-color_abilities
     overflow: hidden
     @media(min-width:520px)
-        background: variables.$desktop-background
+        background: variables.$img-hability
+        background-repeat: no-repeat
+        height: 80vh
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        height: 72vh
+        background-size: 100% 98%
+    @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
+        background-size: cover
+        height: 60vh
 
 
 #abilities_content
@@ -16,6 +24,18 @@
         width: variables.$contentForDesktop
         margin: 0 auto
         margin-top: 60px
+        height: calc( 100vh - 120px )
+        padding-left: 30px
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        width: variables.$break-point-desktop-03w
+    @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
+        width: variables.$break-point-desktop-02h
+        padding-left: 0px
+    @media only screen and (min-width: variables.$break-point-desktop-02w ) and (max-width: variables.$break-point-desktop-02w + 1) and (min-height: variables.$break-point-desktop-02h)
+        padding-left: 40px
+
+#ability_container
+    margin-top: 8vh
 #ability_container, #programmer
     @media(min-width:520px)
         h1,h2,h3,a,p
@@ -52,7 +72,6 @@
 #ability_title
     @media(min-width:520px)
         height: auto
-        margin-left: -20px
         margin-top: -25px
         h1
             color: variables.$text-desktop-main
@@ -67,6 +86,7 @@
     margin-top: 10px
     @media(min-width:520px)
         margin-left: 0px
+        font-size: 1.3em
     
     svg
         color:#06FF26

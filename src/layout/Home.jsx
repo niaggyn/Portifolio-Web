@@ -2,56 +2,60 @@ import Navbar from "../components/Navbar";
 import Nextpag from "../components/Nextpag";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
 
-//placeholder img
-import logoMobile from '../img/logoMobile.png'
+//img
+import logoMobile from "../img/logoMobile.png";
 import msg from "../img/bemVindo.svg";
 import cvitae from "../img/curriculum.svg";
-import gif from '../img/DMa.gif'
 
-//styke
+//style
 import "../styles/components/home.sass";
 
 const Home = () => {
   return (
     <>
       <section className="home" id="home_container">
-        <div><Navbar/></div>
+        <div>
+          <Navbar />
+        </div>
         <div id="home_content">
           <div id="logo">
-            {/* <Logo /> */}
             <img src={logoMobile} alt="NiaggyWebDeveloper" />
           </div>
           <div id="apresentation">
             <div id="profile_apresentation">
               <div id="msg_home">
-                <img src={msg} alt="Bem-Vindo" /> {/**Seja Bem-vindo */}
+                <img src={msg} alt="Bem-Vindo" />
                 <div id="foto"></div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-                  odio repellendus, distinctio dignissimos hic exercitationem a quos?
-                  Odio quibusdam deleniti molestiae ad laborum. Corrupti incidunt
-                  vitae excepturi temporibus cum amet. Lorem ipsum dolor sit, amet
-                  consectetur adipisicing elit. Molestias totam tempora similique
-                  dolorem, nemo illum distinctio illo porro, fugit id minus quae
-                  dolores magni repellat sunt, ea quo eius cupiditate?
+                  Olá, sou <strong>Niaggy Novoa</strong>, um recém-desenvolvedor
+                  e entusiasta na área da computação e designer. Formado como
+                  tecnólogo em construção de edifícios em 2018, e atualmente
+                  graduando em Engenharia da Computação pelo Instituto Federal
+                  de Ciência e Tecnologia do Maranhão, apresento um breve resumo
+                  da minha trajetória nesse mundo digital neste portifólio.De
+                  forma resumida, este portifólio online é um dos meus projetos
+                  recentemente desenvolvidos, que reuni diversos trabalhos e
+                  publicações na área de web-desenvolvimento, web-designer e
+                  construção civil. Como tudo está em movimento, este projeto
+                  ainda está no início, então agradeço sua visita e retorne aqui
+                  sempre que possível.
                 </p>
               </div>
               <div id="perfil">
-                <div id="perfil_left">
-                  <a href="#">
-                    <img src={gif} alt="" /> {/**FOTO PERFIL */}
-                  </a>
-                </div>
+                <div id="perfil_left"></div>
                 <div id="perfil_right">
                   <a href="https://github.com/niaggyn" alt="github">
                     <BsGithub />
-                    <p>niaggynovoa</p> {/**Vai se tornar um value */}
+                    <p>niaggynovoa</p>
                   </a>
-                  <a href="https://www.linkedin.com/in/niaggy-novoa-296497b4/" alt="github">
+                  <a
+                    href="https://www.linkedin.com/in/niaggy-novoa-296497b4/"
+                    alt="github"
+                  >
                     <BsLinkedin />
-                    <p>niaggynovoa</p> {/**Vai se tornar um value */}
+                    <p>niaggynovoa</p>
                   </a>
                 </div>
               </div>
@@ -62,28 +66,35 @@ const Home = () => {
                   </a>
                 </button>
               </div>
-            </div>
-            <div id="social-medias">
-              <div id="link_content">
-                <a href="https://www.instagram.com/niaggynovoa/" id="link_contact">
-                  <BsInstagram />
-                  <p>@niaggysilva</p>
-                </a>
-              </div>
-              <div id="link_content">
-                <a href="https://www.linkedin.com/in/niaggy-novoa-296497b4/" id="link_contact">
-                  <BsLinkedin />
-                  <p>niaggysilva</p>
-                </a>
-              </div>
-              <div id="link_content">
-                <a href="https://github.com/niaggyn" id="link_contact">
-                  <BsGithub />
-                  <p>niaggysilva</p>
-                </a>
+              <div id="social-medias">
+                <div id="link_content">
+                  <a
+                    href="https://www.instagram.com/niaggynovoa/"
+                    id="link_contact"
+                  >
+                    <BsInstagram />
+                    <p>@niaggysilva</p>
+                  </a>
+                </div>
+                <div id="link_content">
+                  <a
+                    href="https://www.linkedin.com/in/niaggy-novoa-296497b4/"
+                    id="link_contact"
+                  >
+                    <BsLinkedin />
+                    <p>niaggysilva</p>
+                  </a>
+                </div>
+                <div id="link_content">
+                  <a href="https://github.com/niaggyn" id="link_contact">
+                    <BsGithub />
+                    <p>niaggysilva</p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+
           <div id="nextPagHome">
             <Link
               to="projets_container"

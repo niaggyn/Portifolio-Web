@@ -1,17 +1,20 @@
+//components
 import MainCard from "../components/MainCard";
 import Navbar from "../components/Navbar";
 import Nextpag from "../components/Nextpag";
-
 import TitlePag from "../components/TitlePag";
-
-import "../styles/components/abilities.sass";
-
-import { HiChevronDoubleRight } from "react-icons/hi";
-
 import SecondCard from "../components/SecondCard";
 import ThirdCard from "../components/ThirdCard";
 import FourthCard from "../components/FourthCard";
 import { Link } from "react-scroll";
+
+//style
+import "../styles/components/abilities.sass";
+
+//icons
+import { HiChevronDoubleRight } from "react-icons/hi";
+
+
 
 const Abilities = () => {
   return (

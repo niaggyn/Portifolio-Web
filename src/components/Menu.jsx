@@ -2,6 +2,13 @@ import { Link } from "react-scroll";
 import Barra from "../img/barra";
 import { useEffect, useRef } from "react";
 
+//icons
+import { ImHome3 } from "react-icons/im";
+import { GiGraduateCap } from "react-icons/gi";
+import { LuGalleryHorizontal, LuGalleryThumbnails } from "react-icons/lu";
+import { BiSolidContact } from "react-icons/bi";
+
+//style
 import "../styles/components/menu.sass";
 
 const Menu = () => {
@@ -17,7 +24,10 @@ const Menu = () => {
             offset={0}
             duration={500}
           >
-            <a href="#">HOME</a>
+            <a href="#">
+              <ImHome3 />
+              HOME
+            </a>
           </Link>
         </li>
         <li>
@@ -29,7 +39,10 @@ const Menu = () => {
             offset={0}
             duration={500}
           >
-            <a href="#">Projetos</a>
+            <a href="#">
+              <LuGalleryThumbnails />
+              Projetos
+            </a>
           </Link>
         </li>
         <li>
@@ -41,7 +54,10 @@ const Menu = () => {
             offset={0}
             duration={500}
           >
-            <a href="#">Habilidades</a>
+            <a href="#">
+              <GiGraduateCap />
+              Habilidades
+            </a>
           </Link>
         </li>
         <li>
@@ -53,7 +69,10 @@ const Menu = () => {
             offset={0}
             duration={500}
           >
-            <a href="#">Galeria</a>
+            <a href="#">
+              <LuGalleryHorizontal />
+              Galeria
+            </a>
           </Link>
         </li>
         <li>
@@ -65,7 +84,10 @@ const Menu = () => {
             offset={0}
             duration={500}
           >
-            <a href="#">Contato</a>
+            <a href="#">
+              <BiSolidContact />
+              Contato
+            </a>
           </Link>
         </li>
         <li>
@@ -75,7 +97,6 @@ const Menu = () => {
             </a>
           </Link>
         </li>
-        <Barra />
       </ul>
     </section>
   );

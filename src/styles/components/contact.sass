@@ -7,36 +7,34 @@
     width: variables.$mobile-width
     background: variables.$bg-color_contact
     overflow: hidden
+    position: relative
     @media(min-width:520px)
         height: 350px
         width: 100%
         overflow: hidden
+    
+#contact
+    @media(min-width:520px)
+        width: variables.$contentForDesktop
+        margin: 0 auto
+        margin-top: 30px
+        padding-left: 30px
+        h1
+            position: relative
+            left: 20px
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        width: variables.$break-point-desktop-03w
+    @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
+        width: variables.$break-point-desktop-02h
+        padding-left: 0
 
 #contact_title
     @media(min-width:520px)
         h1
-            margin-left: 90px
-
-#backHome
-    width: 20px
-    position: relative
-    right: -90%
-    top: -18%
-    transform: rotate(180deg)
-    @media(min-width:520px)
-        display: none
-    svg
-        color: variables.$text-color-secondary
-        animation: downUp 2s ease-in-out infinite
-        @keyframes downUp
-            0%
-                transform: rotate(180deg)
-            100%
-                transform: translateY(0)
-            50%
-                transform: translateY(-15px)
+            margin-left: 00px
 
 #contact_desk
+    margin-top: 18vh
     @media(min-width:520px)
         width: variables.$contentForDesktop
         margin: 0 auto
@@ -44,10 +42,16 @@
         flex-direction: row
         margin-right: auto
         position: relative
-
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        width: variables.$break-point-desktop-03w
+        margin-right: 100px
+    @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
+        width: variables.$break-point-desktop-03h
+        margin-right: 0px
+        
 #contact_content
     width: 320px
-    height: 560px
+    height: 500px
     margin: 0 auto
     margin-top: -70px
     background: variables.$bg-color-contact-container
@@ -55,13 +59,14 @@
         width: 529px
         height: 182px
         margin-top: 30px
+    
     #info_contact
         @media(min-width:520px)
             margin: 30px 0 0 30px
 
 #phone, #email
     height: 50px
-    padding: 93px 0 19px 22px
+    padding: 43px 0 19px 22px
     @media(min-width:520px)
         padding: 10px 0 0 10px
     h4
@@ -131,3 +136,30 @@
         width: 300px
         @media(max-width:520px)
             display: none
+
+#backHome
+    position: absolute
+    bottom: 10vh
+    right: 50%
+    transform: translate(50%)
+    width: 20px
+    @media(min-width:520px)
+        display: none
+    @media(min-width: variables.$break-point-desktop-01w - 1px)
+        display: none
+    div
+        font-size: 1.5em
+        color: variables.$text-color-secondary
+        animation: downUp 2s ease-in-out infinite
+        @keyframes downUp
+            100%
+                transform: translateY(0deg)
+            50%
+                transform: translateY(-15px)
+        p
+            position: relative
+            font-size: .5em
+            right: 25%
+            color: variables.$text-color
+        svg
+            color: variables.$icon-devweb
