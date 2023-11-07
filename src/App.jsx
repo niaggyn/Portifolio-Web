@@ -19,26 +19,12 @@ class App extends Component {
       scrolled: false,
       divSizes: [],
     };
-    //this.firstPage = createRef();
 
     this.arrayListHeights = [];
     for (let i = 0; i < 5; i++) {
       this.arrayListHeights.push(createRef());
     }
-
-    /* window.addEventListener("load", () => {
-      this.getDivPages();
-    }); */
-    //this.scrollPage2 = this.scrollPage2.bind(this);
   }
-
-  /* handleScroll = () => {
-    if (window.scrollY > 100) {
-      this.setState({ scrolled: true });
-    } else {
-      this.setState({ scrolled: false });
-    }
-  }; */
 
   componentWillUnmount() {
     this.scrollToggle();
@@ -87,15 +73,6 @@ class App extends Component {
           inline: "nearest",
         });
         currentPageIndex = index;
-      }
-      if (index >= 0 && index < pages.length && pages.style.width > 520) {
-        /* pages[index].scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest",
-        });
-        window.scrollBy(0, offset);
-        currentPageIndex = index; */
       }
     }
     window.addEventListener("wheel", (event) => {
@@ -152,40 +129,3 @@ class App extends Component {
 }
 
 export default App;
-
-/* const log = document.getElementById("log");
-
-        // Lock button: Lock the screen to the other orientation (rotated by 90 degrees)
-        const rotate_btn = document.querySelector("#lock_button");
-        rotate_btn.addEventListener("click", () => {
-        log.textContent += `Lock pressed \n`;
-
-        const oppositeOrientation = screen.orientation.type.startsWith("portrait")
-        ? "landscape"
-        : "portrait";
-        screen.orientation
-        .lock(oppositeOrientation)
-        .then(() => {
-        log.textContent = `Locked to ${oppositeOrientation}\n`;
-        })
-        .catch((error) => {
-        log.textContent += `${error}\n`;
-        });
-        });
-
-        // Unlock button: Unlock the screen orientation (if locked)
-        const unlock_btn = document.querySelector("#unlock_button");
-        unlock_btn.addEventListener("click", () => {
-        log.textContent += "Unlock pressed \n";
-        screen.orientation.unlock();
-        });
-
-        // Full screen button: Set the example to fullscreen.
-        const fullscreen_btn = document.querySelector("#fullscreen_button");
-        fullscreen_btn.addEventListener("click", () => {
-        log.textContent += "Fullscreen pressed \n";
-        const container = document.querySelector("#example_container");
-        container.requestFullscreen().catch((error) => {
-        log.textContent += `${error}\n`;
-        });
-        }); */

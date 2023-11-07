@@ -46,13 +46,18 @@ const Home = () => {
               <div id="perfil">
                 <div id="perfil_left"></div>
                 <div id="perfil_right">
-                  <a href="https://github.com/niaggyn" alt="github">
+                  <a
+                    href="https://github.com/niaggyn"
+                    alt="github"
+                    target="_blank"
+                  >
                     <BsGithub />
                     <p>niaggynovoa</p>
                   </a>
                   <a
                     href="https://www.linkedin.com/in/niaggy-novoa-296497b4/"
                     alt="github"
+                    target="_blank"
                   >
                     <BsLinkedin />
                     <p>niaggynovoa</p>
@@ -61,7 +66,10 @@ const Home = () => {
               </div>
               <div id="cvitae">
                 <button>
-                  <a href="https://www.linkedin.com/in/niaggy-novoa-296497b4/">
+                  <a
+                    href="https://www.linkedin.com/in/niaggy-novoa-296497b4/"
+                    target="_blank"
+                  >
                     <img src={cvitae} alt="Baixe o pdf do curriculo" />
                   </a>
                 </button>
@@ -71,6 +79,7 @@ const Home = () => {
                   <a
                     href="https://www.instagram.com/niaggynovoa/"
                     id="link_contact"
+                    target="_blank"
                   >
                     <BsInstagram />
                     <p>@niaggysilva</p>
@@ -80,13 +89,18 @@ const Home = () => {
                   <a
                     href="https://www.linkedin.com/in/niaggy-novoa-296497b4/"
                     id="link_contact"
+                    target="_blank"
                   >
                     <BsLinkedin />
                     <p>niaggysilva</p>
                   </a>
                 </div>
                 <div id="link_content">
-                  <a href="https://github.com/niaggyn" id="link_contact">
+                  <a
+                    href="https://github.com/niaggyn"
+                    id="link_contact"
+                    target="_blank"
+                  >
                     <BsGithub />
                     <p>niaggysilva</p>
                   </a>
