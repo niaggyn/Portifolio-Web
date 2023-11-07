@@ -29,6 +29,10 @@
                 text-align: center
                 margin-top: 15px
                 font-size: 0.8em
+                @media(min-width: variables.$break-point-desktop-06w - 1px)
+                    font-size: .8em
+                    color: #fff
+
 
     #cards_content, #cards2_content
         @media(min-width:520px)
@@ -41,6 +45,8 @@
                 color: variables.$text-color
                 position: relative
                 top: 10px
+                @media(min-width: variables.$break-point-desktop-06w - 1px)
+                    color: #fff
             svg      
                 height: 55px
 

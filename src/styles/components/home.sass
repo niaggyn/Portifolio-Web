@@ -65,6 +65,8 @@
             height: calc( 100vh - 120px )
             @media only screen and (min-width: variables.$break-point-desktop-02w ) and (max-width: variables.$break-point-desktop-02w + 1) and (min-height: variables.$break-point-desktop-02h)
                 padding-left: 40px
+            @media(min-width: variables.$break-point-desktop-06w - 1px)
+                padding-left: 0px
     @media(min-width: variables.$break-point-desktop-04w)
         width: variables.$break-point-desktop-04w
     @media(min-width: variables.$break-point-desktop-01w - 1px)
@@ -127,6 +129,9 @@
             font-size: 1.5em
         @media screen and (max-width: 1280px + 1) and (min-height: 1024px-1)
             font-size: 1em
+            width: 500px
+        @media(min-width: variables.$break-point-desktop-06w - 1px)
+            font-size: .8em
             width: 500px
     #foto
         width: 180px
@@ -264,6 +269,8 @@
                 display: inline-block
                 margin: 0 10px 0 0
                 font-style: normal
+                @media(min-width: variables.$break-point-desktop-06w - 1px)
+                    font-size: .8em
 
             &:hover
                 transition: 0.5s

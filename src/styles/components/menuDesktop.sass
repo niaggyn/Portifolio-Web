@@ -30,8 +30,8 @@
 ul
     list-style-type: none
     li
-        height: 15px
-        margin-bottom: 10px
+        height: 25px
+        padding-bottom: 20px
         &:hover
             background: variables.$bg-color_home_desktop
     div
@@ -52,15 +52,16 @@ ul
             padding-left: 40px
         #desatived
             color: #262626
+        @media(min-width: variables.$break-point-desktop-06w - 1px)
+            font-size: .8em
+        
     svg
         margin-right: 7px
+        margin-bottom: -2px
         color: variables.$text-color-secondary
-        padding-top: 2px
-    &:hover
-        color: variables.$text-color-secondary
-        svg
+        &:hover
             color: #ffff
-            transition: 0.1s
+            
 
 .show-menu-desktop
     transform: translate(-170px)

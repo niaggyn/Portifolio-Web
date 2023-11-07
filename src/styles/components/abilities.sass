@@ -33,24 +33,26 @@
         padding-left: 0px
     @media only screen and (min-width: variables.$break-point-desktop-02w ) and (max-width: variables.$break-point-desktop-02w + 1) and (min-height: variables.$break-point-desktop-02h)
         padding-left: 40px
+    @media(min-width: variables.$break-point-desktop-06w - 1px)
+        font-size: .8em
+        padding-left: 0
 
 #ability_container
-    margin-top: 8vh
-#ability_container, #programmer
+    margin-top: 8vh 
     @media(min-width:520px)
-        h1,h2,h3,a,p
-            color: variables.$text-desktop-main
         @include mixins.center
         flex-direction: row
         margin-right: auto
         margin-top: 30px
         gap: 20px
         width: variables.$contentForDesktop
+    @media(min-width: variables.$break-point-desktop-06w - 1px)
+        
 
 #card-desktop-orders
     @media(min-width:520px)
         width: 350px
-
+    
 #programmer
     @media(min-width:520px)
         #programmer_tips
@@ -67,6 +69,7 @@
                     border: variables.$border-cards2-desktop
                 h3       
                     color: variables.$text-desktop-main
+                    @media(min-width: variables.$break-point-desktop-06w - 1px)
 
         
 #ability_title
@@ -87,7 +90,6 @@
     @media(min-width:520px)
         margin-left: 0px
         font-size: 1.3em
-    
     svg
         color:#06FF26
         font-size: 0.8em
@@ -96,6 +98,10 @@
         font-size: 1.1em
         font-weight: normal
         margin-left: 5px
+        @media(min-width: 520px)
+            color: variables.$text-desktop-main
+        @media(min-width: variables.$break-point-desktop-06w - 1px)
+            font-size: 1em
 #dev-prog
     @media(min-width:520px)
         margin-right: auto
