@@ -13,6 +13,7 @@
         height: 70vh
         padding: 0 2 2 2
         border-radius: 15px
+        border-color: #000
 #Mobile_Preview
     height: 100%
 
@@ -132,6 +133,7 @@
         top: -50px
         left: -15%
         gap: 300px
-    @media(min-width: variables.$break-point-desktop-06w - 1px)
-        top: -50px
+    @media only screen and (min-width: variables.$break-point-desktop-06w - 1px) and (min-height: variables.$break-point-desktop-06h - 1px)
+        z-index: 500
+        top: -40px
         left: 0
