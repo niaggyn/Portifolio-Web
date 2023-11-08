@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.788" height="13.824" viewBox="0 0 22.788 13.824">
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0"/>
+      <stop offset="0" stop-color="#fff"/>
       <stop offset="1" stop-color="#05defc"/>
     </linearGradient>
     <clipPath id="clip-path">
@@ -11,7 +11,7 @@
       <path id="Caminho_8" data-name="Caminho 8" d="M401.418,79.054h2.071l4.941,8.294V79.054H410.6v12.6h-2.087l-4.925-8.268v8.268h-2.172Z" transform="translate(-401.418 -79.054)" fill="url(#linear-gradient)"/>
     </clipPath>
   </defs>
-  <g id="Grupo_189" data-name="Grupo 189" transform="translate(-2.066 -0.613)">
+  <g id="Grupo_190" data-name="Grupo 190" transform="translate(-2.066 -0.613)">
     <g id="Grupo_9" data-name="Grupo 9" transform="translate(3.099 0.613)">
       <g id="Grupo_5" data-name="Grupo 5" transform="translate(11.54 0.001)">
         <path id="Caminho_1" data-name="Caminho 1" d="M505.943,91.657v-12.6h.248l7.627,9.64v-9.64h1.151v12.6h-.261L507.126,82.1v9.555Z" transform="translate(-505.943 -79.054)" fill="url(#linear-gradient)"/>
